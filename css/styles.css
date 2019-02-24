@@ -7,6 +7,7 @@ body {
   line-height: 1.8;
   background: #f3f3f3;
   text-align: center;
+  color: #303030;
 }
 
 p {
@@ -31,21 +32,32 @@ h2 {
 
 .main-header {
   padding-bottom: 2em;
-  background: #f3f3f3;
+  background: #252839;
+}
+
+.main-header .student-name{
+  color: #f2b632;
+  margin-top: 0;
+  padding-top: .5em;
 }
 
 .main-nav a {
   display: block;
-  color: #303030;
+  color: #b5b5b7;
   text-decoration: none;
-  background: white;
+  background: rgba(255,255,255,0.2);
   padding: .5em;
   margin-bottom: .5em;
   text-transform: uppercase;
 }
 
+.main-nav a:hover {
+color:white;
+}
+
 .student-bio {
   padding-top: 2em;
+  color: #b5b5b7;
 }
 
 .student-bio img {
@@ -71,6 +83,12 @@ h2 {
   background: #f3f3f3;
 }
 
+.student-skills {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  background: #f9f9f9;
+}
+
 .main-footer {
   border-top: 1px solid #ccc;
   padding-top: 1.5em;
@@ -90,7 +108,7 @@ h2 {
   padding-left: 1em;
 }
 
-.main-footer .footer-nav a:not(:first-child){
+.main-footer .footer-nav a:not(:first-child) {
   display: none;
 }
 
@@ -101,30 +119,29 @@ h2 {
 }
 
 @media (min-width: 768px) {
-
   .main-nav a {
     display: inline-block;
-  background: transparent;
+    background: transparent;
   }
 
   .student-bio img,
-  .student-bio p{
+  .student-bio p {
     display: inline-block;
   }
 
-.student-bio img{
-  float:right;
-  width: calc(50% - 1em);
-  padding: 0 .5em;
-}
+  .student-bio img {
+    float: right;
+    width: calc(50% - 1em);
+    padding-left: .5em;
+  }
 
-.student-bio p{
-  float:left;
-  width: calc(50% - 1em);
-  padding: 0 .5em;
-  margin: 0;
-  text-align: left;
-}
+  .student-bio p {
+    float: left;
+    width: calc(50% - 1em);
+    padding-right: .5em;
+    margin: 0;
+    text-align: left;
+  }
 
   .student-portfolio {
     display: flex;
@@ -144,14 +161,32 @@ h2 {
     padding-left: .5em;
   }
 
-  .main-footer .footer-nav a:first-child{
+  .main-footer .footer-nav a:first-child {
     display: none;
   }
 
-  .main-footer .footer-nav a:not(:first-child){
+  .main-footer .footer-nav a:not(:first-child) {
     display: inline-block;
   }
-
 }
 
-@media (min-width: 1024px) {}
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+
+  .main-header .student-name {
+    float: left;
+  }
+
+  .main-header .main-nav {
+    float: right;
+    margin: 1.5em 0;
+  }
+
+  .student-portfolio .portfolio-item {
+    width: calc(100% / 3);
+    padding: 0 .5em;
+  }
+}
