@@ -4,7 +4,6 @@
 
 body {
   font-family: 'Varela Round', sans-serif;
-  color: #3a3a3a;
   line-height: 1.8;
   background: #f3f3f3;
   text-align: center;
@@ -32,6 +31,7 @@ h2 {
 
 .main-header {
   padding-bottom: 2em;
+  background: #f3f3f3;
 }
 
 .main-nav a {
@@ -52,10 +52,9 @@ h2 {
   width: 70%;
 }
 
-.student-portfolio {
+.main-content {
   background-color: white;
   padding-top: 2em;
-  padding-bottom: 2em;
 }
 
 .student-portfolio .portfolio-item {
@@ -69,6 +68,7 @@ h2 {
 .student-contact-details {
   padding-top: 2em;
   padding-bottom: 2em;
+  background: #f3f3f3;
 }
 
 .main-footer {
@@ -87,6 +87,11 @@ h2 {
 
 .main-footer .footer-nav a {
   text-transform: uppercase;
+  padding-left: 1em;
+}
+
+.main-footer .footer-nav a:not(:first-child){
+  display: none;
 }
 
 .clearfix::after {
@@ -94,3 +99,59 @@ h2 {
   display: table;
   clear: both;
 }
+
+@media (min-width: 768px) {
+
+  .main-nav a {
+    display: inline-block;
+  background: transparent;
+  }
+
+  .student-bio img,
+  .student-bio p{
+    display: inline-block;
+  }
+
+.student-bio img{
+  float:right;
+  width: calc(50% - 1em);
+  padding: 0 .5em;
+}
+
+.student-bio p{
+  float:left;
+  width: calc(50% - 1em);
+  padding: 0 .5em;
+  margin: 0;
+  text-align: left;
+}
+
+  .student-portfolio {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+
+  .student-portfolio .portfolio-item {
+    width: 50%;
+  }
+
+  .student-portfolio .portfolio-item:nth-child(odd) {
+    padding-right: .5em;
+  }
+
+  .student-portfolio .portfolio-item:nth-child(even) {
+    padding-left: .5em;
+  }
+
+  .main-footer .footer-nav a:first-child{
+    display: none;
+  }
+
+  .main-footer .footer-nav a:not(:first-child){
+    display: inline-block;
+  }
+
+}
+
+@media (min-width: 1024px) {}
